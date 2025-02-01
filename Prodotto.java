@@ -4,10 +4,10 @@ public class Prodotto{
     public int codice;
     public String nome;
     public String descrizione;
-    public float prezzo;
-    public int iva;
+    public double prezzo;
+    public double iva;
 
-    public Prodotto(String nome, String descrizione, int prezzo, int iva){
+    public Prodotto(String nome, String descrizione, double prezzo, double iva){
         this.codice = new Random().nextInt(1000);
         this.nome = nome;
         this.descrizione = descrizione;
@@ -29,7 +29,7 @@ public class Prodotto{
     }
 
     public void prezzoConIva(){
-        float prezzoIva = (prezzo * iva) / 100;
+        double prezzoIva = prezzo * iva;
         System.out.println("Il prezzo con iva è: " + prezzoIva);
     }
 
